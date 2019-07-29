@@ -1,6 +1,6 @@
 <template>
     <div class="nav" >
-        <ul :class="{'heightZero':show}">
+        <ul :class="{'yichang':show}">
             <li v-for="(item,index) in tabs" :key="index">
                 <a href="#" :class="{'actived':index == selectedTab}" @click="selecteTab(index)">{{item.render}}</a>
             </li>
@@ -35,11 +35,14 @@ export default {
     top:0;
     left: 0;
     width: 100%;
-    height: 78px;
+    height: 50px;
     border-bottom: 1px solid #dadada;
     background-color:#000;
     opacity: 0.7;
     z-index: 999;
+    a:hover{
+        color: #ef5c42;
+    }
 }
 
 
@@ -48,7 +51,7 @@ export default {
     .nav img{
         position: absolute;
         right: 20px;
-        top:30px;
+        top:0px;
         display: none;
     }
 
@@ -56,13 +59,13 @@ export default {
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-left:100px;
+        //margin-left:100px;
         text-align: center;
     }
 
     .nav ul li{
-        height: 78px;
-        line-height: 78px;
+        height: 50px;
+        line-height: 50px;
         width: 100px;
         text-align: center;
         display: inline-block;
@@ -86,7 +89,7 @@ export default {
 /* mobile */
 @media screen and (max-width:878px){
 
-    .heightZero{
+    .yichang{
         display: none;
     }
 
@@ -96,9 +99,9 @@ export default {
 
     .nav ul{
         position: absolute;
-        top:78px;
+        top:50px;
         text-align: center;
-        left: -100px;
+        //left: -100px;
         width: 100%;
         background-color:#000;
     }
