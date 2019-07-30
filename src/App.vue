@@ -11,7 +11,7 @@
           </div>
           <div class="r-side">
             <about></about>
-            <about></about>
+            <count></count>
             <wx></wx>
           </div>
         </section>
@@ -28,6 +28,7 @@
 import yNav from './components/nav/nav.vue'
 import about from './components/base/about.vue'
 import wx from './components/base/weixin.vue'
+import count from './components/base/count'
 import foot from './components/base/foot'
 export default {
   name: 'App',
@@ -35,6 +36,7 @@ export default {
     yNav,
     about,
     wx,
+    count,
     foot
   }
 }
@@ -84,6 +86,7 @@ export default {
 @media screen and(max-width:878px) {
   .section{
     flex-wrap: wrap;
+    padding: 0;
     .content{
       width: 100%;
     }

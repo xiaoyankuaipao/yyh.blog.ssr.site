@@ -1,11 +1,15 @@
 <template>
     <div class="nav" >
+        <div>
+            <img class="logo" src="./img/logo.png" alt="">
+            <p >小严快跑的小窝</p>
+        </div>
         <ul :class="{'yichang':show}">
             <li v-for="(item,index) in tabs" :key="index">
                 <a href="#" :class="{'actived':index == selectedTab}" @click="selecteTab(index)">{{item.render}}</a>
             </li>
         </ul>
-        <img src="./img/logo.png" style=" width: 50px;height: 50px;" alt="" @click="navShow">
+        <i class="iconfont icon-menu"  @click="navShow"></i>
     </div>
 </template>
 
@@ -43,12 +47,38 @@ export default {
     a:hover{
         color: #ef5c42;
     }
+    i{
+        color:#999FA6; 
+        font-size:40px;
+        &:hover{
+            color: yellow;
+        }
+    }
+    p{
+        color:yellow;
+        float:left;
+        height:50px;
+        line-height:50px;
+        font-size:20px;
+        font-family: "Times New Roman",Georgia,Serif;
+    }
 }
 
+.logo{
+		float: left;
+        height: 46px;
+        
+         padding-top: 4px;
+         padding-left: 100px;
+		img{
+			width: 45px;
+			height: 45px
+		}
+	}
 
 /* pc */
 @media screen and (max-width:1920px){
-    .nav img{
+    .nav i{
         position: absolute;
         right: 20px;
         top:0px;
@@ -59,8 +89,8 @@ export default {
         list-style: none;
         margin: 0;
         padding: 0;
-        //margin-left:100px;
-        text-align: center;
+        margin-left:400px;
+       // text-align: center;
     }
 
     .nav ul li{
@@ -83,6 +113,7 @@ export default {
 
     .nav ul li .actived{
         border-bottom: 3px solid #ef5c42;
+        color: orange;
     }
 }
 
@@ -93,15 +124,16 @@ export default {
         display: none;
     }
 
-    .nav img{
+    .nav i{
         display: inline;
     }
+    
 
     .nav ul{
         position: absolute;
         top:50px;
         text-align: center;
-        //left: -100px;
+        left: -400px;
         width: 100%;
         background-color:#000;
     }
