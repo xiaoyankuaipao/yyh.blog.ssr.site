@@ -4,7 +4,7 @@
             <h2>联系我</h2>
         </div>
         <div class="weixin-content">
-           <img src="./img/weixin.png">
+           <img src="../../../static/img/weixin.png">
         </div>
     </div>
 </template>

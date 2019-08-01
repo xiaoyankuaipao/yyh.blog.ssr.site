@@ -4,9 +4,11 @@
             <h2>关于本站</h2>
         </div>
         <div class="about-content">
-            &nbsp;&nbsp;&nbsp;&nbsp;我是小严快跑，专注于专注.NetCore最佳实践。
-            本站是一个用于知识积累与分享的个人开源博客。
-            主要技术栈为HTML、CSS、vue全家桶、axios、.NetCore。
+            &nbsp;&nbsp;&nbsp;&nbsp;我是小严快跑，专注.NetCore最佳实践。
+            本站是一个用于知识积累与分享的个人开源博客。主要技术栈为HTML、CSS、vue全家桶、axios、.NetCore。
+            <hr>
+            现在在北京工作。<br>
+            邮箱：yanchuanpeng2008@163.com
             <hr>
             Life is a horse,and either you ride it or it rides you!
         </div>

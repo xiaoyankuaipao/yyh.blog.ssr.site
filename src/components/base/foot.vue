@@ -1,7 +1,7 @@
 <template>
     <div class="foot">
         <div class="police">
-            <img src="./img/beian.png" alt="">
+            <img src="../../../static/img/beian.png" alt="">
             <p>
                 京公网安备 **************号
             </p>

@@ -21,6 +21,8 @@
     <foot></foot>
 
     <div class="fix-bg"></div>
+
+    <back-top></back-top>
   </div>
 </template>
 
@@ -30,6 +32,7 @@ import about from './components/base/about.vue'
 import wx from './components/base/weixin.vue'
 import count from './components/base/count'
 import foot from './components/base/foot'
+import backTop from './components/base/backTop'
 export default {
   name: 'App',
   components:{
@@ -37,7 +40,8 @@ export default {
     about,
     wx,
     count,
-    foot
+    foot,
+    backTop
   }
 }
 </script>

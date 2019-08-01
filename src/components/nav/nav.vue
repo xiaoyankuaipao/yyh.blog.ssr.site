@@ -1,7 +1,7 @@
 <template>
     <div class="nav" >
         <div>
-            <img class="logo" src="./img/logo.png" alt="">
+            <img class="logo" src="../../../static/img/logo.png" alt="">
             <p >小严快跑的小窝</p>
         </div>
         <ul :class="{'yichang':show}">
