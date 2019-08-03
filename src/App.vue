@@ -6,8 +6,10 @@
       <div class="container">
         <section class="section">
           <div class="content">
-            <p v-for="(value,index) in 200" :key="index">value,{{index}}</p>
-             <router-view/>
+            <!-- <p v-for="(value,index) in 200" :key="index">value,{{index}}</p> -->
+             <keep-alive>
+              <router-view/>
+             </keep-alive>
           </div>
           <div class="r-side">
             <about></about>
@@ -69,7 +71,7 @@ export default {
 }
 .content{
     width: 68%;
-    background: #faf7f7;
+    //background: #faf7f7;
     border-radius: 5px;
 }
 .r-side{

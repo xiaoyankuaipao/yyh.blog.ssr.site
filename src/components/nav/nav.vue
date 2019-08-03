@@ -6,7 +6,7 @@
         </div>
         <ul :class="{'yichang':show}">
             <li v-for="(item,index) in tabs" :key="index">
-                <a href="#" :class="{'actived':index == selectedTab}" @click="selecteTab(index)">{{item.render}}</a>
+                <a  :class="{'actived':index == selectedTab}" @click.prevent="selecteTab(item.name,index)">{{item.render}}</a>
             </li>
         </ul>
         <i class="iconfont icon-menu"  @click="navShow"></i>
@@ -19,16 +19,17 @@ export default {
         return {
            show:true,
            selectedTab:0,
-           tabs: [{name: "home",render: "首页",icon: "icon-home"},{name: "article",render: "文章",icon: "icon-book"},{name: "msgboard",render: "留言",icon: "icon-messages"},{name: "life",render: "生活",icon: "icon-images"}] 
+           tabs: [{name: "home",render: "首页",icon: "icon-home"},{name: "article",render: "文章",icon: "icon-book"},{name: "messageBox",render: "留言",icon: "icon-messages"},{name: "life",render: "生活",icon: "icon-images"}] 
         }
     },
     methods: {
-        selecteTab(index){
+        selecteTab(name,index){
             this.selectedTab=index;
+            this.$router.push(name);
         },
-       navShow(){
-           this.show = !this.show;	
-       } 
+        navShow(){
+            this.show = !this.show;	
+        } 
     },
 }
 </script>

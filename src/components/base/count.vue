@@ -5,8 +5,8 @@
         </div>
         <div class="count-content">
             <ul>
-                <li v-for="(value,index) in articleCount" :key="index">
-                    <a @click.prevent="onClick(value.category)">{{value.category}}({{value.count}}) </a>
+                <li v-for="(value,index) in categoryGroup" :key="index" >
+                    <a @click.prevent="onClick(value.categoryId)">{{value.categoryName}}({{value.articleCount}}) </a>
                 </li>
             </ul>
         </div>
@@ -14,16 +14,33 @@
 </template>
 
 <script>
+import {getArticleCoutGroupByCategory,getArtilceCountGroupByTag} from  '@/api/articleSystem.js'
 export default {
     data(){
         return {
-            articleCount:[{category: "Vue",count: "10"},{category: ".NetCore",count: "20"},{category: "Linux",count: "5"}] 
+            categoryGroup:{}
         }
     },
+    created() {
+        this.getCategoryGroup();
+    },
     methods:{
-        onClick(category){
+        async getCategoryGroup(){
+            let res = await getArticleCoutGroupByCategory();
+            if(res.state==1){
+                this.categoryGroup=res.data;
+            }
+        },
+        onClick(categoryId){
+            this.$router.push({
+                name: 'articleInfo',
+                params: {
+                    articleCategoryId:categoryId
+                }
+            })
 
-        }
+        } 
+      
     }
 }
 </script>
