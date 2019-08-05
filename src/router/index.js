@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 
 const home = resolve=>require(["@/components/home/home"],resolve)
-const article =  resolve=>require(["@/components/article/article"],resolve)
+const categoryArticlePage =  resolve=>require(["@/components/article/article"],resolve)
 const messageBox =  resolve=>require(["@/components/messageBox/messageBox"],resolve)
 const life = resolve=>require(["@/components/life/life"],resolve)
 
@@ -22,9 +22,9 @@ export default new Router({
       name:'home'      
     },
     {
-      path: '/article',
-      component:article,
-      name:'article'      
+      path: '/categoryArticlePage/:categoryId',
+      component:categoryArticlePage,
+      name:'categoryArticlePage'      
     },
     {
       path: '/messageBox',

@@ -33,9 +33,9 @@ export default {
         },
         onClick(categoryId){
             this.$router.push({
-                name: 'articleInfo',
+                name: 'categoryArticlePage',
                 params: {
-                    articleCategoryId:categoryId
+                    categoryId:categoryId
                 }
             })
 

@@ -19,7 +19,7 @@ export default {
         return {
            show:true,
            selectedTab:0,
-           tabs: [{name: "home",render: "首页",icon: "icon-home"},{name: "article",render: "文章",icon: "icon-book"},{name: "messageBox",render: "留言",icon: "icon-messages"},{name: "life",render: "生活",icon: "icon-images"}] 
+           tabs: [{name: "/home",render: "首页",icon: "icon-home"},{name: "/article",render: "文章",icon: "icon-book"},{name: "/messageBox",render: "留言",icon: "icon-messages"},{name: "/life",render: "生活",icon: "icon-images"}] 
         }
     },
     methods: {

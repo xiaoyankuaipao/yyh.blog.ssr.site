@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <div class="page">
+    <div class="homepage">
         <picloop-play :urls="picData"></picloop-play>
         <div  class="page_info">
             <p> Life is a horse, and either you ride it or it rides you.</p>
         </div>
     </div>
     <article-list :articleList="articleList"></article-list>
-    <page :pageTotal="totalPage"></page>
+    <page :pageTotal="totalPage" @change-page="changePage"></page>
   </div>
 </template>
 
@@ -77,7 +77,19 @@ export default {
           let res=await getArticlePageByCategory(data);
           if(res.state==1){
               this.totalCount=res.result.totalCount;
-              this.totalPage=res.result.totalCount/this.rows;
+              this.totalPage=Math.ceil(res.result.totalCount / this.rows)
+              this.articleList=res.result.data;
+          }
+      },
+      async changePage(page){
+          this.page=page;
+          let data={
+              categoryId:this.categoryId,
+              page:this.page,
+              rows:this.rows
+          }
+          let res=await getArticlePageByCategory(data);
+          if(res.state==1){
               this.articleList=res.result.data;
           }
       }
@@ -86,9 +98,10 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style  lang="less" scoped>
 
-.page{
+
+.homepage{
     width: 100%;
     height: 300px;
     text-align: center;

@@ -13,7 +13,7 @@
               </div>
               <div class="article-review">
                   <div><img src="" alt=""></div>
-                 <div class = "article-abstract"><h4>我是文章概要</h4></div>
+                 <div class = "article-abstract"><h4>{{item.remark}}</h4></div>
               </div>
               <div class="article-count">
                   <span class="iconfont icon-good"></span>
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    name:'article-list',
+  name:'article-list',
   props:{
       articleList:{
           type:Array
@@ -90,6 +90,7 @@ export default {
     color: #646464;
     display: flex;
     align-items: center;
+    margin-top: 10px;
     p img{
         max-width: 100%!important;
         max-height: 100%;
