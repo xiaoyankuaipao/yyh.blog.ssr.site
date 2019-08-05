@@ -7,11 +7,13 @@
         </div>
     </div>
     <article-list :articleList="articleList"></article-list>
+    <page :pageTotal="totalPage"></page>
   </div>
 </template>
 
 <script>
 import picloopPlay from '../../plugins/picLoopPlay/index.vue'
+import page  from '../../plugins/page/page.vue'
 import articleList from '../article/articleList.vue'
 import {getArticlePageByCategory} from '../../api/articleSystem.js'
 export default {
@@ -26,9 +28,10 @@ export default {
             require('../../../static/img/fengjing/fengjing4.jpg'),
         ],
         page:1,
-        rows:10,
+        rows:5,
         categoryId:0,
         totalCount:0,
+        totalPage:0,
         articleList:[
             // {
             //     id:1,
@@ -58,7 +61,8 @@ export default {
   },
   components: {
     picloopPlay,
-    articleList
+    articleList,
+    page
   },
   created() {
       this.getArticlePage();
@@ -73,6 +77,7 @@ export default {
           let res=await getArticlePageByCategory(data);
           if(res.state==1){
               this.totalCount=res.result.totalCount;
+              this.totalPage=res.result.totalCount/this.rows;
               this.articleList=res.result.data;
           }
       }
