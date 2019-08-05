@@ -6,12 +6,20 @@
                   <a href="javascript:void(0)" @click="jumpToArticle(item)">{{item.title}}</a>
               </h2>
               <div class="article-msg">
-                  <span class="iconfont icon-iconfontriyongbaihuo "></span>
-                  <span class = "article-msg-time">{{ item.createTime}}</span>
+                  <span class="iconfont icon-iconfontyouhuiquan"></span>
+                  <span >{{ item.categoryName}}</span>
+                  <span class="iconfont icon-iconfontriyongbaihuo" style="margin-left:20px"></span>
+                  <span >{{ item.createTime}}</span>
               </div>
               <div class="article-review">
                   <div><img src="" alt=""></div>
                  <div class = "article-abstract"><h4>我是文章概要</h4></div>
+              </div>
+              <div class="article-count">
+                  <span class="iconfont icon-good"></span>
+                  <span>{{item.likeCount}}</span>
+                  <span class="iconfont icon-browse" style="margin-left:20px"></span>
+                  <span>{{item.readCount}}</span>
               </div>
           </li>
       </ul>
@@ -66,11 +74,37 @@ export default {
     }
 }
 
-.article-title a{
+.article-title,.article-title a{
     display: inline-block;
+    text-decoration: none;
     transition: all ease .3s;
 }
 .article-title:hover{
     transform: translateX(10px);
+}
+.article-title:hover a{
+    color: #d9a800
+}
+
+.article-review{
+    color: #646464;
+    display: flex;
+    align-items: center;
+    p img{
+        max-width: 100%!important;
+        max-height: 100%;
+    }
+}
+
+.article-abstract{
+    margin-left: 15px;
+}
+
+.article-count{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+    color: #404040;
 }
 </style>

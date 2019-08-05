@@ -48,16 +48,6 @@ export const getArticleCoutGroupByCategory = () => axiosService.GET('/api/articl
 export const getArticlePageByCategory = data => axiosService.GET('/api/articlemanage/Artilce/GetArticlePageByCategory',data)
 
 /**
- * 统计每个Tag下的文章数
- */
-export const getArtilceCountGroupByTag = () => axiosService.GET('/api/articlemanage/Artilce/GetArticleStaticCountByTag')
-
-/**
- * 根据文章Tag分页获取文章
- */
-export const getArticlePageByTag = () => axiosService.GET('/api/articlemanage/Artilce/GetArticlePageByTag')
-
-/**
  * 根据文章Id获取文章的详细信息
  */
 export const getArticleById = data => axiosService.GET('/api/articlemanage/Artilce/GetArticleById/' + data)
