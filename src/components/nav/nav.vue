@@ -24,8 +24,11 @@ export default {
     },
     methods: {
         selecteTab(name,index){
+            document.documentElement.scrollTop=0;
             this.selectedTab=index;
+            this.show=!this.show;
             this.$router.push(name);
+            
         },
         navShow(){
             this.show = !this.show;	

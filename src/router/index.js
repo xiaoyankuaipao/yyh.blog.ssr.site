@@ -4,7 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 
 const home = resolve=>require(["@/components/home/home"],resolve)
 const categoryArticlePage =  resolve=>require(["@/components/article/article"],resolve)
-const articleShow=resolve =>require(["@/components/article/articleShow"],resolve)
+//const articleShow=resolve =>require(["@/components/article/articleShow"],resolve)
+import articleShow from "@/components/article/articleShow";
 const messageBox =  resolve=>require(["@/components/messageBox/messageBox"],resolve)
 const life = resolve=>require(["@/components/life/life"],resolve)
 

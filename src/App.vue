@@ -6,7 +6,6 @@
       <div class="container">
         <section class="section">
           <div class="content">
-            <!-- <p v-for="(value,index) in 200" :key="index">value,{{index}}</p> -->
              <keep-alive>
               <router-view/>
              </keep-alive>

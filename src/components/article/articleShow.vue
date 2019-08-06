@@ -28,29 +28,41 @@
 <script>
 import {getArticleById}  from '../../api/articleSystem.js'
 import marked from 'marked'
-// import highlight from '../../directives/highlight.js'
 export default {
   data() {
     return {
-        article:{}
+        article:{
+            articleDto:{
+                title:""
+            }
+        },
+        articleId:this.$route.params.articleId
     }
   },
-//   directives:{
-//       highlight
-//   },
   components: {
 
   },
-  created() {
+  mounted() {
       this.getArticleInfo();
   },
   methods: {
       async getArticleInfo(){
-          let res=await getArticleById(19);
-          if(res.state==1){
-              this.article=res.data;
-          }
-      }
+        document.documentElement.scrollTop=0;
+        let res= await getArticleById(this.articleId);
+        if(res.state==1){
+            this.article=res.data;
+        }
+    }
+  },
+  watch: {
+       $route(){
+            this.articleId=this.$route.params.articleId;
+        },
+        articleId(){
+            if(this.articleId!=undefined){
+                this.getArticleInfo();
+            }
+        }
   },
 }
 </script>
@@ -81,9 +93,6 @@ export default {
 </style>
 
 <style lang="less">
-.article-content img{
-    width:100%;
-	height:auto;
-}
+@import url('../../../static/css/article/style.less');
 </style>
 
