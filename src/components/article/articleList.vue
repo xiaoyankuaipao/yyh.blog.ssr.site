@@ -44,7 +44,12 @@ export default {
   },
   methods: {
       jumpToArticle(item){
-
+            this.$router.push({
+                name: 'articleShow',
+                params: {
+                    articleId:item.id
+                }
+            })
       }
   },
 }

@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import highlight from "./directives/highlight";
+
 Vue.config.productionTip = false
+Vue.use(highlight)
 
 /* eslint-disable no-new */
 new Vue({
