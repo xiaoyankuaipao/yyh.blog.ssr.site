@@ -36,7 +36,7 @@ module.exports = {
     // cssSourceMap: true
 
     env: require('./dev.env'),
-    host: '10.100.45.33',
+    host: '192.168.31.132',
     //host: '127.0.0.1',
     port: 8080,
     autoOpenBrowser: true,

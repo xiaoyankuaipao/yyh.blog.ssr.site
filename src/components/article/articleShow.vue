@@ -21,7 +21,13 @@
         <hr>
 
         <div  v-highlight class="article-content" v-html="article.articleDto.content"></div>
+
+        <div class="article-like">
+          <span class = "love-text">{{ love }}</span>
+        </div>
       </div>
+
+     
   </div>
 </template>
 
@@ -36,7 +42,8 @@ export default {
                 title:""
             }
         },
-        articleId:this.$route.params.articleId
+        articleId:this.$route.params.articleId,
+        love:'赞'
     }
   },
   components: {
@@ -88,7 +95,27 @@ export default {
     display: flex;
     justify-content:space-between;
 }
+.article-like{
+  background: url("../../../static/img/love-before.png") no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  cursor: pointer;
+  text-align: center;
+  transition: all ease 0.5s;
+  
+}
+.love-text{
+  display: inline-block;
+  user-select: none;
+  color: #F7eded;
+  margin-top: 7px;
+}
 
+.article-like:hover{
+  //  animation: move 1.5s;
+  transform: rotateY(360deg);
+}
 
 </style>
 
