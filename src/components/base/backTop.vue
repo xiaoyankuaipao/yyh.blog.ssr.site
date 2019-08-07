@@ -35,7 +35,7 @@ export default {
                 scrollTop = scrollTop - jumpPx;
                 if(this.target == ''){
                     document.documentElement.scrollTop=scrollTop - jumpPx;
-                     
+                    document.body.scrollTop=scrollTop - jumpPx;
                 }else{
                     target.scrollTop = scrollTop - jumpPx;
                 }

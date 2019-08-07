@@ -22,8 +22,8 @@
 
         <div  v-highlight class="article-content" v-html="article.articleDto.content"></div>
 
-        <div class="article-like">
-          <span class = "love-text">{{ love }}</span>
+        <div class="article-like" :class="{'article-like-after':love=='已赞'}" @click="loveIt">
+          <span class = "love-text" >{{ love }}</span>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import {getArticleById}  from '../../api/articleSystem.js'
+import {getArticleById,likeArticle}  from '../../api/articleSystem.js'
 import marked from 'marked'
 export default {
   data() {
@@ -46,18 +46,22 @@ export default {
         love:'赞'
     }
   },
-  components: {
-
-  },
   mounted() {
       this.getArticleInfo();
   },
   methods: {
-      async getArticleInfo(){
+    async getArticleInfo(){
         document.documentElement.scrollTop=0;
         let res= await getArticleById(this.articleId);
         if(res.state==1){
             this.article=res.data;
+        }
+    },
+    async loveIt(){
+        if(this.love=='赞'){
+            this.love='已赞';
+            this.article.articleDto.likeCount++;
+            let res= await likeArticle(this.articleId);
         }
     }
   },
@@ -112,10 +116,15 @@ export default {
   margin-top: 7px;
 }
 
-.article-like:hover{
-  //  animation: move 1.5s;
-  transform: rotateY(360deg);
+.article-like-after{
+    transform: rotateY(360deg);
+    background: url("../../../static/img/love-after.png") no-repeat;
 }
+
+// .article-like:hover{
+//   //  animation: move 1.5s;
+//   transform: rotateY(360deg);
+// }
 
 </style>
 

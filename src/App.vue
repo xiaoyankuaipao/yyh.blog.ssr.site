@@ -6,9 +6,11 @@
       <div class="container">
         <section class="section">
           <div class="content">
-             <keep-alive>
+             <!-- <keep-alive>
               <router-view/>
-             </keep-alive>
+             </keep-alive> -->
+
+              <router-view/>
           </div>
           <div class="r-side">
             <about></about>

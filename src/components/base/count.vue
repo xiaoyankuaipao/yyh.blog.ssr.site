@@ -33,6 +33,7 @@ export default {
         },
         onClick(categoryId){
             document.documentElement.scrollTop=0;
+            document.body.scrollTop=0;
             this.$router.push({
                 name: 'categoryArticlePage',
                 params: {

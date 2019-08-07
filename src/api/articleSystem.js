@@ -51,3 +51,11 @@ export const getArticlePageByCategory = data => axiosService.GET('/api/articlema
  * 根据文章Id获取文章的详细信息
  */
 export const getArticleById = data => axiosService.GET('/api/articlemanage/Artilce/GetArticleById/' + data)
+
+/**
+ * 文章点赞
+ */
+export const likeArticle = data =>
+         axiosService.GET(
+           "/api/articlemanage/Artilce/LikeThisArticle/" + data
+         );
