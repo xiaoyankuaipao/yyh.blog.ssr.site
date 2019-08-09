@@ -22,10 +22,14 @@ export default {
   data() {
     return {
         picData:[
-            require('../../../static/img/fengjing/fengjing1.jpg'),
-            require('../../../static/img/fengjing/fengjing2.jpg'),
-            require('../../../static/img/fengjing/fengjing3.jpg'),
-            require('../../../static/img/fengjing/fengjing4.jpg'),
+            // require('../../../static/img/fengjing/fengjing1.jpg'),
+            // require('../../../static/img/fengjing/fengjing2.jpg'),
+            // require('../../../static/img/fengjing/fengjing3.jpg'),
+            // require('../../../static/img/fengjing/fengjing4.jpg'),
+            'https://s2.ax1x.com/2019/08/09/eqwlW9.md.jpg',
+            'https://s2.ax1x.com/2019/08/09/eqwNdO.md.jpg',
+            'https://s2.ax1x.com/2019/08/09/eqwdFe.md.jpg',
+            'https://s2.ax1x.com/2019/08/09/eqwwJH.md.jpg',
         ],
         page:1,
         rows:5,
@@ -33,29 +37,6 @@ export default {
         totalCount:0,
         totalPage:0,
         articleList:[
-            // {
-            //     id:1,
-            //     title:'我是文章名称',
-            //     createTime:'2019-08-03 11:11:11',
-            //     categoryName:'C#',
-            //     readCount:10,
-            //     likeCount:9
-            // },
-            // {
-            //     id:2,
-            //     title:'我是文章名称',
-            //     createTime:'2019-08-03 11:11:11',
-            //      readCount:10,
-            //      categoryName:'C#',
-            //     likeCount:9
-            // },{
-            //     id:3,
-            //     title:'我是文章名称',
-            //     createTime:'2019-08-03 11:11:11',
-            //     categoryName:'C#',
-            //      readCount:10,
-            //     likeCount:9
-            // }
         ]
     }
   },
@@ -99,8 +80,6 @@ export default {
 </script>
 
 <style  lang="less" scoped>
-
-
 .homepage{
     width: 100%;
     height: 300px;
@@ -119,4 +98,17 @@ export default {
         //z-index: 999;
     }
 }
+
+// @media screen and(max-width:1920px) {
+//     .homepage{
+//         height: 300px;
+//     }
+// }
+
+// @media screen and(max-width:878px) {
+//     .homepage{
+//         height: 150px;
+//     }
+// }
+
 </style>

@@ -45,7 +45,7 @@ export default {
     left: 0;
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid #dadada;
+    //border-bottom: 1px solid #dadada;
     //background-color:#000;
     //background-color: #63B8FF;
     background: blue;

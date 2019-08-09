@@ -29,6 +29,9 @@ export default {
   },
   methods: {
       async getArticlePage(){
+          if(this.categoryId==0){
+              this.categoryId=this.$route.params.categoryId;
+          }
           let data={
               categoryId:this.categoryId,
               page:this.page,
@@ -62,7 +65,6 @@ export default {
             this.getArticlePage();
         }
     }
-
 }
 </script>
 

@@ -72,7 +72,6 @@ export default {
 }
 .content{
     width: 68%;
-    //background: #faf7f7;
     border-radius: 5px;
 }
 .r-side{
@@ -112,7 +111,8 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../static/img/main.jpg') ;
+  //background: url('../static/img/main.jpg') ;
+  background: url('https://s2.ax1x.com/2019/08/09/eqdLRA.jpg');
   background-size:100%;
   z-index:-1;
 }
