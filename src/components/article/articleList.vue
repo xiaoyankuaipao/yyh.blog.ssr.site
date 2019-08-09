@@ -67,9 +67,9 @@ export default {
 
 .article-item{
     padding: 10px;
-    margin-top: 15px;
-    border-radius: 3px;
-    background: #f7f7f7;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #F0FFFF;
     list-style: none;
     h2{
         padding: 10px 0;

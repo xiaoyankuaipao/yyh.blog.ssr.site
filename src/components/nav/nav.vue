@@ -19,7 +19,7 @@ export default {
         return {
            show:true,
            selectedTab:0,
-           tabs: [{name: "/home",render: "首页",icon: "icon-home"},{name: "/article",render: "文章",icon: "icon-book"},{name: "/messageBox",render: "留言",icon: "icon-messages"},{name: "/life",render: "生活",icon: "icon-images"}] 
+           tabs: [{name: "/home",render: "首页"},{name: "/messageBox",render: "留言"},{name: "/life",render: "生活"}] 
         }
     },
     methods: {
@@ -46,8 +46,10 @@ export default {
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #dadada;
-    background-color:#000;
-    opacity: 0.7;
+    //background-color:#000;
+    //background-color: #63B8FF;
+    background: blue;
+    opacity: 0.8;
     z-index: 999;
     a:hover{
         color: #ef5c42;

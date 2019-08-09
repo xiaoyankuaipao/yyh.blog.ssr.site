@@ -112,7 +112,8 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../static/img/mainBg2.jpg');
+  background: url('../static/img/main.jpg') ;
+  background-size:100%;
   z-index:-1;
 }
 </style>

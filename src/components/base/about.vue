@@ -26,11 +26,13 @@ export default {
         text-align: center;
         padding: 15px;
         color: #eee;
-        background:#2e3033;
+        background: #87CEEB;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
     .about-content{
         color: #1a1a1a;
-        background: #faf7f7;
+        background: #F0FFFF;
         padding: 15px;
         line-height: 28px;
         font-size: 14px;

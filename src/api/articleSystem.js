@@ -55,7 +55,16 @@ export const getArticleById = data => axiosService.GET('/api/articlemanage/Artil
 /**
  * 文章点赞
  */
-export const likeArticle = data =>
-         axiosService.GET(
-           "/api/articlemanage/Artilce/LikeThisArticle/" + data
-         );
+export const likeArticle = data => axiosService.GET( "/api/articlemanage/Artilce/LikeThisArticle/" + data)
+
+////////////////////////留言//////////////////////////////
+
+/**
+ * 获取留言列表
+ */
+export const getMessageSkipPage = data => axiosService.GET('/api/articlemanage/Message/GetMessageSkipPage', data)
+
+/**
+ * 留言
+ */
+export const addMessage = data => axiosService.POST('/api/articlemanage/Message/AddMessage', data)

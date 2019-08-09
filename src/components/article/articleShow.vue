@@ -80,13 +80,12 @@ export default {
 
 <style lang="less" scoped>
 .article-show-content{
-    margin-top: 10px;
-    background: #f7f7f7;
+    background: #F0FFFF;
     color: #404040;
     font-size: 14px;
     padding: 15px;
     border: 0;
-    border-radius: 3px;
+    border-radius: 8px;
 }
 .article-title{
     padding: 5px;

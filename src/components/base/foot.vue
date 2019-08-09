@@ -20,6 +20,7 @@
 .foot{
     color: #ccc;
     background: #2e3033;
+    opacity: 0.5;
     a{
         color: #ccc;
         text-decoration: none;

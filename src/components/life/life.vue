@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-      life
+      开发中
   </div>
 </template>
 

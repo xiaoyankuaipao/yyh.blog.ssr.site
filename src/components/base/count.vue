@@ -52,11 +52,12 @@ export default {
     text-align: center;
     padding: 15px;
     color: #eee;
-    background-color: #2e3033;
+    background: #87CEEB;
+    
 }
 
 .count-content{
-    background: #faf7f7;
+    background: #F0FFFF;
     padding: 15px;
     line-height: 30px;
     font-size: 15px;

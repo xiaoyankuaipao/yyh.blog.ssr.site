@@ -74,9 +74,8 @@ export default {
 .goto-top-box{
     display: none;
     position: fixed;
-    
-    right: 3em;
-    bottom: 5em;
+    // right: 3em;
+    // bottom: 5em;
     a{
         display: inline-block;
         width: 50px;
@@ -88,6 +87,19 @@ export default {
     }
 }
 
+@media screen and(max-width:1920px) {
+    .goto-top-box{
+        right: 5em;
+        bottom: 5em;
+    }
+}
+
+@media screen and(max-width:878px) {
+     .goto-top-box{
+        right: 1em;
+        bottom: 3em;
+    }
+}
 
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="weixin">
         <div class="weixin-header">
-            <h2>联系我</h2>
+            <h2>微信</h2>
         </div>
         <div class="weixin-content">
            <img src="../../../static/img/weixin.png">
@@ -20,11 +20,11 @@ export default {
         text-align: center;
         padding: 15px;
         color: #eee;
-        background:#2e3033;
+        background: #87CEEB;
     }
     .weixin-content{
         color: #1a1a1a;
-        background: #faf7f7;
+        background: #F0FFFF;
         padding: 15px;
         display:flex;
         align-items:center; 

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="homepage">
-        <picloop-play :urls="picData"></picloop-play>
+        <picloop-play :urls="picData" class="picloop"></picloop-play>
         <div  class="page_info">
             <p> Life is a horse, and either you ride it or it rides you.</p>
         </div>
@@ -107,6 +107,7 @@ export default {
     text-align: center;
     font-size: 30px;
     position: relative;
+     margin-bottom:10px;
     .page_info{
         position:absolute;
         left: 0;
