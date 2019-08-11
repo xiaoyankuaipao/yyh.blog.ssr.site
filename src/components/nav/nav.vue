@@ -48,8 +48,9 @@ export default {
     //border-bottom: 1px solid #dadada;
     //background-color:#000;
     //background-color: #63B8FF;
-    background: blue;
-    opacity: 0.8;
+    //background: blue;
+    background:  #7f95f8;
+    //opacity: 0.8;
     z-index: 999;
     a:hover{
         color: #ef5c42;
@@ -142,7 +143,7 @@ export default {
         text-align: center;
         left: -400px;
         width: 100%;
-        background-color:#000;
+        background-color:#6495ED;
     }
 
     .nav ul li{

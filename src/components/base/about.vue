@@ -5,12 +5,10 @@
         </div>
         <div class="about-content">
             &nbsp;&nbsp;&nbsp;&nbsp;我是小严快跑，专注.NetCore最佳实践。
-            本站是一个用于知识积累与分享的个人开源博客。主要技术栈为HTML、CSS、vue全家桶、axios、.NetCore。
+            本站是一个用于知识积累与分享的个人开源博客。主要技术栈为html、css、vue全家桶、axios、.NetCore。
             <hr>
             现在在北京工作。<br>
             邮箱：yanchuanpeng2008@163.com
-            <hr>
-            Life is a horse,and either you ride it or it rides you!
         </div>
     </div>
 </template>
@@ -26,7 +24,8 @@ export default {
         text-align: center;
         padding: 15px;
         color: #eee;
-        background: #87CEEB;
+        //background: #87CEEB;
+        background: #8197fa;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
