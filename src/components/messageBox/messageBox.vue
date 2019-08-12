@@ -6,7 +6,9 @@
         <textarea v-model="message"></textarea>
         <div class="submit-info">
           <div class="user-info">
-
+            <a href = "javascript: void(0)" onclick = "return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=YourID&response_type=token&scope=all&redirect_uri=http://localhost:6180/qc_back.html', 'oauth2Login_10000' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes');" class = "login-qq">
+							<img src="../../../static/img/qq.png" style="width:50px;height:50px;" alt="QQ登录" >
+						</a>
           </div>
           <input type="button" value="留言" @click="addMessage">
         </div>
