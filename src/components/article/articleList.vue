@@ -13,7 +13,7 @@
               </div>
               <div class="article-review">
                   <div><img src="" alt=""></div>
-                 <div class = "article-abstract"><h4>{{item.remark}}</h4></div>
+                 <div class = "article-abstract"><span>{{item.remark}}</span></div>
               </div>
               <div class="article-count">
                   <span class="iconfont icon-good"></span>
@@ -59,7 +59,7 @@ export default {
 .articleList{
     font-size: 14px;
     line-height: 20px;
-    color: #404040;
+    color: #757575;
     image{
         max-width: 100%;
     }
@@ -92,7 +92,7 @@ export default {
 }
 
 .article-review{
-    color: #646464;
+    color: #757575;
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -103,7 +103,10 @@ export default {
 }
 
 .article-abstract{
-    margin-left: 15px;
+    margin-left:15px;
+    span{
+        color:#757575;
+    }
 }
 
 .article-count{
@@ -111,6 +114,6 @@ export default {
     justify-content: flex-end;
     align-items: center;
     margin-top: 5px;
-    color: #404040;
+    color: #757575;
 }
 </style>
