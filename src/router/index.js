@@ -4,10 +4,12 @@ import HelloWorld from '@/components/HelloWorld'
 
 const home = resolve=>require(["@/components/home/home"],resolve)
 const categoryArticlePage =  resolve=>require(["@/components/article/article"],resolve)
-//const articleShow=resolve =>require(["@/components/article/articleShow"],resolve)
 import articleShow from "@/components/article/articleShow";
 const messageBox =  resolve=>require(["@/components/messageBox/messageBox"],resolve)
 const life = resolve=>require(["@/components/life/life"],resolve)
+
+import signInRedirect from "@/components/oidc/signin-oidc.vue";
+import redirectSilentrenew from "@/components/oidc/redirect-silentrenew.vue";
 
 Vue.use(Router)
 
@@ -42,6 +44,16 @@ export default new Router({
       path: "/life",
       component: life,
       name: "life"
+    },
+    {
+      path: "/signin-oidc",
+      name: "signInRedirect",
+      component: signInRedirect
+    }, 
+    {
+      path: "/redirect-silentrenew",
+      name: "redirectSilentrenew",
+      component: redirectSilentrenew
     }
   ]
 });

@@ -6,10 +6,6 @@
       <div class="container">
         <section class="section">
           <div class="content">
-             <!-- <keep-alive>
-              <router-view/>
-             </keep-alive> -->
-
               <router-view/>
           </div>
           <div class="r-side">
@@ -71,11 +67,11 @@ export default {
     margin-right: auto;
 }
 .content{
-    width: 68%;
+    width: 75%;
     border-radius: 5px;
 }
 .r-side{
-    width: 32%;
+    width: 25%;
 }
 
 /* pc */
@@ -85,7 +81,7 @@ export default {
     padding: 20px 30px;
   }
   .r-side{
-    margin-left: 30px;
+    margin-left: 15px;
   }
 }
 

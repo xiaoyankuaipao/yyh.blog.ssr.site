@@ -7,8 +7,9 @@
             </p>
         </div>
         <div class="copyright">
-            <div>Copyright  © 2019&nbsp; <a href = "http://www.yyh.cn">yyh.cn &nbsp;</a></div>
+            <div>Copyright  © 2019&nbsp; <a href = "http://www.yancplife.club">ycplife.club &nbsp;</a></div>
             <div>Powered by Vue <span>|</span></div>
+            <div><a href = "http://118.24.205.200:9999"><span>后台</span></a></div>
         </div>
     </div>
 </template>
