@@ -6,9 +6,9 @@
         <textarea v-model="message"></textarea>
         <div class="submit-info">
           <div class="user-info">
-            <a href = "javascript: void(0)" onclick = "return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=YourID&response_type=token&scope=all&redirect_uri=http://localhost:6180/qc_back.html', 'oauth2Login_10000' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes');" class = "login-qq">
+            <!-- <a href = "javascript: void(0)" onclick = "return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=YourID&response_type=token&scope=all&redirect_uri=http://localhost:6180/qc_back.html', 'oauth2Login_10000' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes');" class = "login-qq">
 							<img src="../../../static/img/qq.png" style="width:50px;height:50px;" alt="QQ登录" >
-						</a>
+						</a> -->
           </div>
           <input type="button" value="留言" @click="addMessage">
         </div>
@@ -20,7 +20,7 @@
           <li v-for="(item,index) in messageArr" :key="index">
             <div class="ds-post-main">
               <div class="ds-avatar">
-                <img src="http://thirdqq.qlogo.cn/g?b=oidb&k=noOooDb9qFjPoK8n97ichKw&s=40&t=1555954022" alt="">
+                <img :src="item.imgUrl" alt="">
               </div>
               <div class="ds-comment-body">
                 <h3>{{item.userName}} 在 {{item.createTime}} 说：</h3>
@@ -39,6 +39,7 @@
 
 <script>
 import {getMessageSkipPage,addMessage} from '../../api/articleSystem.js'
+import Mgr from '../../config/oidcService'
 export default {
   data() {
     return {
@@ -48,7 +49,8 @@ export default {
         //totalPage:0,
         messageArr:[],
         message:'',
-        loadBtnMsg:'点我加载更多'
+        loadBtnMsg:'点我加载更多',
+        mgr:new Mgr()
     }
   },
   created() {
@@ -56,11 +58,17 @@ export default {
   },
   methods: {
     async addMessage(){
+
+      var user=await this.mgr.getLoginUser();
+      if(user==null){
+        alert('请先登录!');
+        return;
+      }
+
       let data={
         id:0,
-        userName:'test',
+        userName:user.profile.name,
         message:this.message,
-        
       }
       let res = await addMessage(data);
       if(res.state==1){

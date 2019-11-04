@@ -15,7 +15,7 @@
         </div>
         <div class="loginInfo">
              <a v-if="isLogin==false" @click="login">登录</a>
-             <a v-else style="" @click="login">欢迎，{{userName}}</a>
+             <a v-else style="" @click="logout">欢迎，{{userName}}</a>
         </div>
     </div>
 </template>
@@ -46,7 +46,10 @@ export default {
         },
         login(){
             this.mgr.signIn();
-        } 
+        },
+        logout(){
+            this.mgr.signOut();
+        }
     },
     mounted() {
       this.mgr.getLoginUser().then(user=>{
