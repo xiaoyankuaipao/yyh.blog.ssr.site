@@ -49,6 +49,7 @@ export default class oidcService {
         return new Promise((resolve, reject) => {
             mgr.getUser().then(function (user) {
                 if (user != null) {
+                    console.log(user);
                     return resolve(user)
                 } else {
                     return resolve(null);
