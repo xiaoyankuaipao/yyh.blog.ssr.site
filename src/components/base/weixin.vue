@@ -19,8 +19,8 @@ export default {
     .weixin-header{
         text-align: center;
         padding: 15px;
-        color: #eee;
-        background: #87CEEB;
+        color: #DEDEDE;
+        background: #8197fa;
     }
     .weixin-content{
         color: #1a1a1a;
@@ -30,8 +30,6 @@ export default {
         align-items:center; 
         justify-content:center;
         img{
-            //width:100%;
-            // height:auto;
             width: 150px;
             height:auto;
         }

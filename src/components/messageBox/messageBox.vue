@@ -46,7 +46,6 @@ export default {
         page:1,
         size:5,
         totalCount:0,
-        //totalPage:0,
         messageArr:[],
         message:'',
         loadBtnMsg:'点我加载更多',
@@ -65,6 +64,13 @@ export default {
         return;
       }
 
+      console.log(this.message);
+
+      if(this.message==""){
+         alert('请输入留言内容');
+         return;
+      }
+
       let data={
         id:0,
         userName:user.profile.name,
@@ -81,8 +87,6 @@ export default {
         let s = myDate.getSeconds();
         data.createTime=year + '-' + this.conver(month) + "-" + this.conver(date) + " " + this.conver(h) + ':' + this.conver(m) + ":" + this.conver(s);
         this.messageArr.unshift(data);//头部添加
-
-      
       }
 
     },

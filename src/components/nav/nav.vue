@@ -11,17 +11,20 @@
                     <a  :class="{'actived':index == selectedTab}" @click.prevent="selecteTab(item.name,index)">{{item.render}}</a>
                 </li>
             </ul>
-            <i class="iconfont icon-menu"  @click="navShow"></i>
+            <i class="iconfont icon-menu" style="color:#473C8B"  @click="navShow"></i>
         </div>
         <div class="loginInfo">
-             <a v-if="isLogin==false" @click="login">登录</a>
-             <a v-else style="" @click="logout">欢迎，{{userName}}</a>
+             <!-- <a v-if="isLogin==false" @click="login">登录</a>
+             
+             <a v-else style="" @click="logout">欢迎，{{userName}} </a> -->
+             <user-info></user-info>
         </div>
     </div>
 </template>
 
 <script>
 import Mrg from '../../config/oidcService'
+import userInfo from '../userInfo/userInfo'
 export default {
     data(){
         return {
@@ -32,6 +35,9 @@ export default {
            mgr:new Mrg(),
            userName:''
         }
+    },
+    components:{
+        userInfo
     },
     methods: {
         selecteTab(name,index){
@@ -48,7 +54,7 @@ export default {
             this.mgr.signIn();
         },
         logout(){
-            this.mgr.signOut();
+            //this.mgr.signOut();
         }
     },
     mounted() {
@@ -78,6 +84,7 @@ export default {
         align-items:flex-start;
         background:  #7f95f8;
         z-index: 999;
+        box-shadow: 2px 2px 4px #436EEE;
         a:hover{
             color: #EEEED1;
         }
@@ -103,19 +110,14 @@ export default {
         float: left;
         height: 46px;
        
-        
         padding-top: 4px;
         img{
             width: 45px;
             height: 45px;
-            
         }
     }
 
     .nav i{
-        position: absolute;
-        right: 20px;
-        top:0px;
         display: none;
     }
 
@@ -123,7 +125,7 @@ export default {
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-left:-500px;
+        margin-left:-200px;
         text-align: center;
     }
 
@@ -151,13 +153,9 @@ export default {
         color: orange;
     }
 
-    .loginInfo a{
+    .loginInfo {
         height:50px;
         line-height:50px;
-        font-size:15px; 
-        cursor: pointer;
-        color:#DEDEDE;
-       
     }
 }
 
@@ -169,10 +167,11 @@ export default {
     }
 
     .nav i{
-        display: inline;
+        display: block;
+        position:fixed;
+        top : 5px;
+        left: 0px;
     }
-    
-
     .nav ul{
         position: absolute;
         top:50px;
@@ -180,6 +179,7 @@ export default {
         left: 500px;
         width: 100%;
         background-color:#6495ED;
+        margin-left:-500px;
     }
 
     .nav ul li{

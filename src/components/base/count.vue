@@ -51,9 +51,8 @@ export default {
 .count-header{
     text-align: center;
     padding: 15px;
-    color: #eee;
-    background: #87CEEB;
-    
+    color: #DEDEDE;
+    background: #8197fa;
 }
 
 .count-content{

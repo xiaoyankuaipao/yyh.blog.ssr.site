@@ -1,17 +1,17 @@
 import oidc  from 'oidc-client'
 var config = {
-    userStore: new oidc.WebStorageStateStore(),
-    authority: "http://localhost:5000",
-    client_id: "Spa Client",
-    redirect_uri: "http://localhost:8080/signin-oidc",
-    response_type: "id_token token",
-    scope: "api1 openid profile address phone email",
-    post_logout_redirect_uri: "http://localhost:8080",
-    silent_redirect_uri: "http://localhost:8080/redirect-silentrenew",
-    accessTokenExpiringNotificationTime: 10,
-    automaticSilentRenew: true,
-    filterProtocolClaims: true,
-    loadUserInfo: true
+  userStore: new oidc.WebStorageStateStore(),
+  authority: "http://localhost:5000",
+  client_id: "Spa Client",
+  redirect_uri: "http://localhost:8080/signin-oidc",
+  response_type: "id_token token",
+  scope: "api1 openid profile address phone email",
+  post_logout_redirect_uri: "http://localhost:8080",
+  silent_redirect_uri: "http://localhost:8080/redirect-silentrenew",
+  accessTokenExpiringNotificationTime: 10,
+  automaticSilentRenew: true,
+  filterProtocolClaims: true,
+  loadUserInfo: true
 };
 
 var mgr = new oidc.UserManager(config);
@@ -24,8 +24,6 @@ mgr.events.addUserLoaded(function (user) {
 mgr.events.addAccessTokenExpiring(function () {
     console.log("token expiring...");
 });
-
-
 
 export default class oidcService {
     //登录

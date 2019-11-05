@@ -22,8 +22,7 @@ export default {
     .about-header{
         text-align: center;
         padding: 15px;
-        color: #eee;
-        //background: #87CEEB;
+        color: #DEDEDE;
         background: #8197fa;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
