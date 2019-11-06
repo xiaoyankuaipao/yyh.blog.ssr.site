@@ -1,11 +1,11 @@
 import oidc  from 'oidc-client'
 var config = {
   userStore: new oidc.WebStorageStateStore(),
-  authority: "http://localhost:5000",
-  client_id: "Spa Client",
+  authority: "http://localhost:5100",
+  client_id: "vue",
   redirect_uri: "http://localhost:8080/signin-oidc",
   response_type: "id_token token",
-  scope: "api1 openid profile address phone email",
+  scope: "article openid profile address phone email",
   post_logout_redirect_uri: "http://localhost:8080",
   silent_redirect_uri: "http://localhost:8080/redirect-silentrenew",
   accessTokenExpiringNotificationTime: 10,

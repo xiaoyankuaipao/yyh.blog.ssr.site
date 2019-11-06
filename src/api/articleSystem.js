@@ -68,3 +68,8 @@ export const getMessageSkipPage = data => axiosService.GET('/api/articlemanage/M
  * 留言
  */
 export const addMessage = data => axiosService.POST('/api/articlemanage/Message/AddMessage', data)
+
+/**
+ * 获取Github登录用户的API信息
+ */
+export const getGitHubUserApi = data => axiosService.GET('https://api.github.com/users/'+data);

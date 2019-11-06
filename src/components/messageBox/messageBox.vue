@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import {getMessageSkipPage,addMessage} from '../../api/articleSystem.js'
+import {getMessageSkipPage,addMessage,getGitHubUserApi} from '../../api/articleSystem.js'
 import Mgr from '../../config/oidcService'
 export default {
   data() {
@@ -71,10 +71,18 @@ export default {
          return;
       }
 
+      var userImg='';
+      if(user.profile.idp=="GitHub"){
+        var userApi=await getGitHubUserApi(user.profile.name);
+        userImg=userApi.avatar_url;
+        console.log(userApi);
+      }
+
       let data={
         id:0,
         userName:user.profile.name,
         message:this.message,
+        imgUrl:userImg
       }
       let res = await addMessage(data);
       if(res.state==1){
@@ -183,8 +191,7 @@ li{
   list-style: none;
 }
 
-.ds-post-main 
-{
+.ds-post-main{
   position:relative; 
   width:100%;
   margin-bottom: 10px;
