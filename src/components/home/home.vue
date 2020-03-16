@@ -32,7 +32,7 @@ export default {
             'https://s2.ax1x.com/2019/08/09/eqwwJH.md.jpg',
         ],
         page:1,
-        rows:5,
+        rows:10,
         categoryId:0,
         totalCount:0,
         totalPage:0,

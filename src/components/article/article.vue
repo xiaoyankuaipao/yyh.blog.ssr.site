@@ -13,7 +13,7 @@ export default {
   data() {
     return {
         page:1,
-        rows:5,
+        rows:10,
         categoryId:0,
         totalCount:0,
         totalPage:0,
