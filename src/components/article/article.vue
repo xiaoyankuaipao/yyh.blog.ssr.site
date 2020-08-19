@@ -14,7 +14,7 @@ export default {
     return {
         page:1,
         rows:5,
-        categoryId:0,
+        categoryId:"",
         totalCount:0,
         totalPage:0,
         articleList:[]
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
       async getArticlePage(){
-          if(this.categoryId==0){
+          if(this.categoryId==""){
               this.categoryId=this.$route.params.categoryId;
           }
           let data={

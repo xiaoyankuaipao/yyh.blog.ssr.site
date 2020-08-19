@@ -33,7 +33,7 @@ export default {
         ],
         page:1,
         rows:5,
-        categoryId:0,
+        categoryId:"",
         totalCount:0,
         totalPage:0,
         articleList:[
