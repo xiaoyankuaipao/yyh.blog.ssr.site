@@ -8,8 +8,8 @@
               <div class="article-msg">
                   <span class="iconfont icon-iconfontyouhuiquan"></span>
                   <span >{{ item.categoryName}}</span>
-                  <span class="iconfont icon-iconfontriyongbaihuo" style="margin-left:20px"></span>
-                  <span >{{ item.createTime}}</span>
+                  <!-- <span class="iconfont icon-iconfontriyongbaihuo" style="margin-left:20px"></span> -->
+                  <!-- <span >{{ item.createTime}}</span> -->
               </div>
               <div class="article-review">
                   <div><img src="" alt=""></div>
@@ -58,7 +58,7 @@ export default {
 <style scoped lang="less">
 .articleList{
     font-size: 14px;
-    line-height: 20px;
+    line-height: 15px;
     color: #757575;
     image{
         max-width: 100%;

@@ -7,8 +7,8 @@
                 <div>
                   <span class="iconfont icon-iconfontyouhuiquan"></span>
                   <span>{{ article.categoryName}}</span>
-                  <span class="iconfont icon-iconfontriyongbaihuo" style="margin-left:20px"></span>
-                  <span>{{ article.articleDto.createTime}}</span>
+                  <!-- <span class="iconfont icon-iconfontriyongbaihuo" style="margin-left:20px"></span>
+                  <span>{{ article.articleDto.createTime}}</span> -->
                 </div>
                 <div>
                   <span class="iconfont icon-good"></span>
